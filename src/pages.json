@@ -1,22 +1,38 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/home/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path": "pages/home/index",
+			"path": "pages/category/index",
 			"style": {
-				"navigationBarTitleText": "小程序模版",
-				"backgroundColor": "#EDEDED"
+				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/search/index"
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationStyle": "custom"
+		"navigationBarBackgroundColor": "#EDEDED"
+	},
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/home/index",
+				"iconPath": "static/image/home.png",
+				"selectedIconPath": "static/image/home.png"
+			},
+			{
+				"pagePath": "pages/category/index",
+				"iconPath": "static/image/home.png",
+				"selectedIconPath": "static/image/home.png"
+			}
+		]
 	},
 	"easycom": {
 		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"

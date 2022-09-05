@@ -2,12 +2,12 @@
  * @Author: jweboy
  * @Date: 2022-09-05 17:10:29
  * @LastEditors: jweboy
- * @LastEditTime: 2022-09-05 17:29:24
+ * @LastEditTime: 2022-09-05 17:51:25
 -->
 <template>
   <view class="status-bar">
     <view class="content">
-      <u-avatar src="https://avatars.githubusercontent.com/u/16516645?v=4" :size="24" />
+      <u-avatar v-if="logo" src="https://avatars.githubusercontent.com/u/16516645?v=4" :size="24" />
       <text class="title">{{title}}</text>
     </view>
   </view>
@@ -19,6 +19,9 @@ export default {
     title: {
       default: '标题',
     },
+    logo: {
+      default: true,
+    }
   },
   data() {
     return {}
@@ -40,6 +43,7 @@ export default {
     display: flex;
   }
   .title {
+    color: $uni-text-color;
     margin-left: 24rpx;
   }
 }

@@ -11956,7 +11956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qs@npm:^6.4.0, qs@npm:^6.5.2":
+"qs@npm:^6.11.0, qs@npm:^6.4.0, qs@npm:^6.5.2":
   version: 6.11.0
   resolution: "qs@npm:6.11.0"
   dependencies:
@@ -14843,6 +14843,7 @@ __metadata:
     mini-types: "*"
     miniprogram-api-typings: "*"
     postcss-comment: ^2.0.0
+    qs: ^6.11.0
     regenerator-runtime: ^0.12.1
     sass: ^1.54.8
     sass-loader: ^13.0.2

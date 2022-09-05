@@ -2,7 +2,7 @@
  * @Author: jweboy
  * @Date: 2022-09-04 23:39:56
  * @LastEditors: jweboy
- * @LastEditTime: 2022-09-05 00:48:19
+ * @LastEditTime: 2022-09-05 18:13:05
 -->
 <script>
 	export default {
@@ -25,5 +25,12 @@
 	/*每个页面公共css */
 	.screen-view {
 		height: 100vh;
+	}
+	.tabbar-view {
+		padding-top: 138rpx;
+		height: 100vh;
+	}
+	page {
+		background-color: #EDEDED;
 	}
 </style>

@@ -2,7 +2,7 @@
  * @Author: jweboy
  * @Date: 2022-09-04 23:56:33
  * @LastEditors: jweboy
- * @LastEditTime: 2022-09-05 17:15:46
+ * @LastEditTime: 2022-09-05 17:44:42
 -->
 <template>
   <view>
@@ -51,9 +51,6 @@ export default {
     }
   },
   components: { Announcement, Swiper, CommodityItem, Filter, StatusBar },
-  mounted() {
-    console.log(uni.$u.config)
-  }
 }
 </script>
 
