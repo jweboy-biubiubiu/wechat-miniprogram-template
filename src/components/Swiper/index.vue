@@ -2,24 +2,24 @@
  * @Author: jweboy
  * @Date: 2022-09-05 00:28:18
  * @LastEditors: jweboy
- * @LastEditTime: 2022-09-05 00:28:22
+ * @LastEditTime: 2022-09-05 15:41:39
 -->
 <template>
-  <u-swiper
-    :list="list1"
-  />
+  <u-swiper class="swiper" :list="list" :interval="60000" :circular="true" />
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      list1: [
-        'https://cdn.uviewui.com/uview/swiper/swiper1.png',
-        'https://cdn.uviewui.com/uview/swiper/swiper2.png',
-        'https://cdn.uviewui.com/uview/swiper/swiper3.png',
-      ]
+  props: {
+    list: {
+      default: () => [],
     }
-  }
+  },
 }
 </script>
+
+<style lang="scss" scoped>
+.swiper {
+  height: 300rpx;
+}
+</style>

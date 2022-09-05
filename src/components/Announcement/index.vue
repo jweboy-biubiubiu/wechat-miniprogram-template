@@ -2,7 +2,7 @@
  * @Author: jweboy
  * @Date: 2022-09-05 00:05:10
  * @LastEditors: jweboy
- * @LastEditTime: 2022-09-05 01:37:54
+ * @LastEditTime: 2022-09-05 17:01:47
 -->
 <template>
   <view class="">
@@ -42,15 +42,15 @@ export default {
 
 .announcement {
   padding: 24rpx;
-  color: #999;
-  font-size: 20rpx;
+  color: $uni-text-color-grey;
+  font-size: 24rpx;
   display: flex;
   align-items: center;
   .content {
     flex: 1;
   }
   .icon {
-    font-size: 20rpx;
+    font-size: 24rpx;
   }
 }
 
@@ -59,8 +59,8 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 44rpx 24rpx  72rpx  24rpx;
-  font-size: 24rpx;
-  color: #999;
+  font-size: 28rpx;
+  color: $uni-text-color-grey;
   .icon{
     margin-bottom: 36rpx;
     font-size: 36rpx;
