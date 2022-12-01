@@ -4,25 +4,25 @@
  * @LastEditors: jweboy
  * @LastEditTime: 2022-09-05 15:39:11
  */
-import Vue from 'vue'
-import uView from 'uview-ui'
-import App from './App'
+import Vue from 'vue';
+import uView from '@/uni_modules/uview-ui';
+import App from './App';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-Vue.use(uView)
+Vue.use(uView);
 
 uni.$u.setConfig({
-	// 修改$u.config对象的属性
-	config: {
-		// 修改默认单位为rpx，相当于执行 uni.$u.config.unit = 'rpx'
-		// unit: 'rpx'
-	},
-})
+  // 修改$u.config对象的属性
+  config: {
+    // 修改默认单位为rpx，相当于执行 uni.$u.config.unit = 'rpx'
+    // unit: 'rpx',
+  },
+});
 
-App.mpType = 'app'
+App.mpType = 'app';
 
 const app = new Vue({
-  ...App
-})
-app.$mount()
+  ...App,
+});
+app.$mount();

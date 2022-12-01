@@ -5,42 +5,43 @@
  * @LastEditTime: 2022-09-05 17:44:42
 -->
 <template>
-  <view>
-    <status-bar title="清酒"/>
+  <scroll-view :scroll-y="true">
+    <status-bar title="清酒" />
     <view class="container screen-view">
       <announcement />
       <view class="main">
         <swiper :list="swiper" />
         <filter />
-        <u-row :gutter="8" customStyle="margin-bottom: 20rpx">
+        <u-row :gutter="8" custom-style="margin-bottom: 20rpx">
           <u-col :span="6">
-            <commodity-item />
+            <commodity-item @click="handleNavigate" />
           </u-col>
           <u-col :span="6">
-            <commodity-item />
+            <commodity-item @click="handleNavigate" />
           </u-col>
         </u-row>
-        <u-row :gutter="8" customStyle="margin-bottom: 20rpx">
+        <u-row :gutter="8" custom-style="margin-bottom: 20rpx">
           <u-col :span="6">
-            <commodity-item />
+            <commodity-item @click="handleNavigate" />
           </u-col>
           <u-col :span="6">
-            <commodity-item />
+            <commodity-item @click="handleNavigate" />
           </u-col>
         </u-row>
       </view>
     </view>
-  </view>
+  </scroll-view>
 </template>
 
 <script>
-import Announcement from '@/components/Announcement'
-import Swiper from '@/components/Swiper'
-import CommodityItem from '@/components/CommodityItem'
-import StatusBar from '@/components/StatusBar'
-import Filter from './components/Filter'
+import Announcement from '@/components/Announcement';
+import Swiper from '@/components/Swiper';
+import CommodityItem from '@/components/CommodityItem';
+import StatusBar from '@/components/StatusBar';
+import Filter from './components/Filter';
 
 export default {
+  components: { Announcement, Swiper, CommodityItem, Filter, StatusBar },
   data() {
     return {
       swiper: [
@@ -48,10 +49,15 @@ export default {
         'https://cdn.uviewui.com/uview/swiper/swiper2.png',
         'https://cdn.uviewui.com/uview/swiper/swiper3.png',
       ],
-    }
+      goodsList: [{}, {}],
+    };
   },
-  components: { Announcement, Swiper, CommodityItem, Filter, StatusBar },
-}
+  methods: {
+    handleNavigate(data) {
+      uni.navigateTo({ url: '/pages/commodity/detail' });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

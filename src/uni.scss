@@ -40,9 +40,16 @@ $uni-border-color:#c8c7cc;
 /* 尺寸变量 */
 
 /* 文字尺寸 */
-$uni-font-size-sm:24rpx;
-$uni-font-size-base:28rpx;
-$uni-font-size-lg:32rpx;
+$uni-font-size-sm: 24rpx;
+$uni-font-size-base: 28rpx;
+$uni-font-size-lg: 32rpx;
+$uni-font-size-xl: 36rpx;
+$uni-font-size-xxl: 40rpx;
+
+/* 文字权重 */
+$uni-font-weight-base: 400;
+$uni-font-weight-md: 500;
+$uni-font-weight-lg: 600;
 
 /* 图片尺寸 */
 $uni-img-size-sm:40rpx;
@@ -76,4 +83,16 @@ $uni-font-size-subtitle:36rpx;
 $uni-color-paragraph: #3F536E; // 文章段落颜色
 $uni-font-size-paragraph:30rpx;
 
-@import 'uview-ui/theme.scss';
+$uni-padding-sm: 8rpx;
+$uni-padding-base: 16rpx;
+$uni-padding-md: 24rpx;
+$uni-padding-lg: 32rpx;
+
+$uni-margin-sm: 8rpx;
+$uni-margin-base: 16rpx;
+$uni-margin-md: 24rpx;
+$uni-margin-lg: 32rpx;
+
+
+/* uni.scss */
+@import '@/uni_modules/uview-ui/theme.scss';

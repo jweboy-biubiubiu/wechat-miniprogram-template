@@ -14,6 +14,15 @@
 		},
 		{
 			"path": "pages/search/index"
+		},
+    {
+			"path": "pages/my/index"
+		},
+    {
+			"path": "pages/commodity/detail",
+      "style": {
+				"navigationBarTitleText": "商品详情"
+			}
 		}
 	],
 	"globalStyle": {
@@ -24,17 +33,15 @@
 		"list": [
 			{
 				"pagePath": "pages/home/index",
-				"iconPath": "static/image/home.png",
-				"selectedIconPath": "static/image/home.png"
+        "text": "首页"
 			},
-			{
-				"pagePath": "pages/category/index",
-				"iconPath": "static/image/home.png",
-				"selectedIconPath": "static/image/home.png"
+      {
+				"pagePath": "pages/my/index",
+        "text": "我的"
 			}
 		]
 	},
 	"easycom": {
-		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
 	}
 }

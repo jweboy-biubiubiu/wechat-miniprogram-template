@@ -6,7 +6,7 @@
 -->
 <template>
   <view class="content">
-    <u-row :gutter="8" customStyle="margin-bottom: 20rpx">
+    <u-row :gutter="8" custom-style="margin-bottom: 20rpx">
       <u-col :span="6">
         <commodity-item />
       </u-col>
@@ -14,7 +14,7 @@
         <commodity-item />
       </u-col>
     </u-row>
-    <u-row :gutter="8" customStyle="margin-bottom: 20rpx">
+    <u-row :gutter="8" custom-style="margin-bottom: 20rpx">
       <u-col :span="6">
         <commodity-item />
       </u-col>
@@ -22,7 +22,7 @@
         <commodity-item />
       </u-col>
     </u-row>
-    <u-row :gutter="8" customStyle="margin-bottom: 20rpx">
+    <u-row :gutter="8" custom-style="margin-bottom: 20rpx">
       <u-col :span="6">
         <commodity-item />
       </u-col>
@@ -34,14 +34,14 @@
 </template>
 
 <script>
-import CommodityItem from '@/components/CommodityItem'
+import CommodityItem from '@/components/CommodityItem';
 
 export default {
   components: { CommodityItem },
   onLoad(options) {
-    console.log(options)
-  }
-}
+    console.log(options);
+  },
+};
 </script>
 
 <style lang="scss" scoped>

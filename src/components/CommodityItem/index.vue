@@ -5,8 +5,13 @@
  * @LastEditTime: 2022-09-05 16:51:57
 -->
 <template>
-  <view class="wrapper">
-    <u-image :showLoading="true" :src="data.thumbnail" width="100%" height="320rpx" />
+  <view class="wrapper" @tap="handleClick">
+    <u-image
+      :show-loading="true"
+      :src="data.thumbnail"
+      width="100%"
+      height="320rpx"
+    />
     <view class="main">
       <view class="title">16度无觅清酒-墨标-纯米大吟酿720ml</view>
       <view class="content">
@@ -21,12 +26,18 @@
 export default {
   props: {
     data: {
+      type: Object,
       default: () => ({
-        thumbnail: 'https://cdn.uviewui.com/uview/album/1.jpg'
-      })
-    }
-  }
-}
+        thumbnail: 'https://cdn.uviewui.com/uview/album/1.jpg',
+      }),
+    },
+  },
+  methods: {
+    handleClick() {
+      this.$emit('click', this.data);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
