@@ -41,4 +41,7 @@ page {
   background-color: #ededed;
   color: #333;
 }
+view {
+  box-sizing: border-box;
+}
 </style>

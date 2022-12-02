@@ -26,20 +26,20 @@
       <u-line />
       <view class="goods-title">商品详情</view>
     </view>
-    <view>
-      <view>
-        <rich-text :nodes="detailItems" />
-      </view>
+    <view class="pictures">
+      <rich-text :nodes="detailItems" />
     </view>
+    <status-bar />
   </view>
 </template>
 
 <script>
-import ListItem from './components/ListItem';
+import ListItem from './components/list-item';
+import StatusBar from './components/status-bar';
 
 export default {
   name: 'CommodityDetail',
-  components: { ListItem },
+  components: { ListItem, StatusBar },
   data() {
     return {
       swiperList: [
@@ -92,5 +92,8 @@ export default {
     font-weight: $uni-font-weight-md;
     font-size: $uni-font-size-lg;
   }
+}
+.pictures {
+  padding-bottom: 128rpx;
 }
 </style>
