@@ -8,6 +8,11 @@
 export default {
   onLaunch: function () {
     console.log('App Launch');
+    // #ifdef MP-WEIXIN
+    uni.showShareMenu({
+      menus: ['shareAppMessage', 'shareTimeline'],
+    });
+    // #endif
   },
   onShow: function () {
     console.log('App Show');

@@ -17,6 +17,7 @@ export default {
   },
   methods: {
     handleAvatarClick() {
+      // #ifdef MP-WEIXIN
       wx.getUserProfile({
         desc: '用于完善会员资料',
         success: (res) => {
@@ -28,6 +29,7 @@ export default {
           };
         },
       });
+      // #endif
     },
   },
 };
