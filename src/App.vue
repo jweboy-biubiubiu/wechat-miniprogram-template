@@ -5,9 +5,11 @@
  * @LastEditTime: 2022-09-05 18:13:05
 -->
 <script>
+import { REDIS_URL, REDIS_TOKEN } from './constants';
+
 export default {
   onLaunch: function () {
-    console.log('App Launch');
+    // console.log('App Launch');
     // #ifdef MP-WEIXIN
     uni.showShareMenu({
       menus: ['shareAppMessage', 'shareTimeline'],
@@ -15,10 +17,17 @@ export default {
     // #endif
   },
   onShow: function () {
-    console.log('App Show');
+    uni.request({
+      url: REDIS_URL + '/hget/globalConfig/payable',
+      header: { Authorization: `Bearer ${REDIS_TOKEN}` },
+      success({ data }) {
+        uni.setStorageSync('payable', data.result);
+      },
+    });
+    // console.log('App Show');
   },
   onHide: function () {
-    console.log('App Hide');
+    // console.log('App Hide');
   },
 };
 </script>

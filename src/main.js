@@ -7,8 +7,10 @@
 import Vue from 'vue';
 import uView from '@/uni_modules/uview-ui';
 import App from './App';
+import { request } from '@/utils/request';
 
 Vue.config.productionTip = false;
+Vue.prototype.$request = request;
 
 Vue.use(uView);
 

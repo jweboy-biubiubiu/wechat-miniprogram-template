@@ -26,10 +26,10 @@
       <u-line />
       <view class="goods-title">商品详情</view>
     </view>
-    <view class="pictures">
+    <view :class="payable === 'ON' ? 'pictures' : ''">
       <rich-text :nodes="detailItems" />
     </view>
-    <status-bar />
+    <status-bar v-if="payable === 'ON'" />
   </view>
 </template>
 
@@ -52,6 +52,7 @@ export default {
         'https://cdn.jweboy.com/marketing/test/O1CN019QJRDr2BA4weExOKE_%21%212214829668297.jpeg',
         'https://cdn.jweboy.com/marketing/test/O1CN01rNQDi12BA4wXjkXW3_%21%212214829668297.jpeg',
       ],
+      payable: '',
     };
   },
   onLoad() {
@@ -59,6 +60,7 @@ export default {
       name: 'img',
       attrs: { src: item, width: '100%' },
     }));
+    this.payable = uni.getStorageSync('payable');
   },
 };
 </script>
